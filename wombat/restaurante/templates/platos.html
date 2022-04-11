@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Platos</h1>
+    <h1>Alimentos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tiempo de preparación</th>
+                <th>Categoría</th>
+                <th>Alimentos</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for p in pl %}
+            <tr>
+                <td> {{ p.nombre }}</td>
+                <td align="center"> {{ p.tiempo_preparacion }}</td>
+                <td> {{ p.categoria }}</td>
+                <td> {{ p.alimentos }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
