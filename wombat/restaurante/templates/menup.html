@@ -1,0 +1,40 @@
+{%extends 'index.html' %}
+{% load static %}
+{%block b%}
+        <section id="section0" class="slider-area">      
+            <div class="main-slider owl-theme owl-carousel"> 
+                <!-- Start Slingle Slide -->
+                <div class="single-slide item" style="background-image: url(img/slider/1900x1000.png)">
+
+
+                    <!-- <img src="img/slider/placehold.png"> -->
+
+                    <!-- Start Slider Content -->
+
+                        <div class="slider-content-area">  
+                                <div class="row">                   
+                                        <div class="slide-content-wrapper text-center">
+                                            <div class="slide-content">
+                                                <img class="classic" src="{% static 'img/cemrebakerylogo.png'%}">
+                                                <h3 style="color: black;">WOMBAT RESTAURANT </h3>
+                                                <h2 style="color: black;">A Taste Of  The Good Life</h2>
+                                                <div class="panel-body text-center"> 
+                                                    <a style="height: 40px;" class="w3-button w3-block w3-teal " href="http://127.0.0.1:8000/restaurante/alimentos">ALIMENTOS</a>   
+                                                    <a style="height: 40px;" class="w3-button w3-block w3-teal" href="http://127.0.0.1:8000/restaurante/platos">PLATOS</a>
+                                                    <img class="classic" src="{% static 'img/icon.png'%}">
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+
+                        
+                    <!-- Start Slider Content -->
+                </div>
+                <!-- End Single Slide -->
+                <!-- Start Slingle Slide -->
+             </div>
+        </section>
+        {% endblock%}

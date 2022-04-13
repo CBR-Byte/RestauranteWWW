@@ -3,9 +3,9 @@ from .models import Platos, Alimentos
 
 # Create your views here.
 
-def index(request):
 
-    return render(request,'index.html')
+def menu(request):
+    return render(request,'menup.html')
 
 def alimentos(request):
     alimento = Alimentos.objects.all()

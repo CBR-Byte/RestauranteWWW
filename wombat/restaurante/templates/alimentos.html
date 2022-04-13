@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'index.html'%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Alimentos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Categoría</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for a in al %}
-            <tr>
-                <td> {{ a.nombre }}</td>
-                <td> {{ a.categoria }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-</body>
-
-</html>
+{% block b%}
+<section  class="slider-area">      
+    <div class="slide-content-wrapper text-center"> 
+        <div class="slider-content-area">  
+            <h1 style="color: black;padding-bottom: 60px;">Alimentos</h1>
+            <table style="color: black;" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">Nombre</th>
+                        <th style="text-align: center;"> Categoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in al %}
+                        <tr>
+                            <td> {{ a.nombre }}</td>
+                            <td> {{ a.categoria }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>    
+    </div>
+</section>
+{%endblock%}

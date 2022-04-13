@@ -118,6 +118,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    'C:/Users/julia/OneDrive-correounivalle.edu.co/semestre actual/www/taller 3/GitHub/RestauranteWWW/wombat/restaurante/static'
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

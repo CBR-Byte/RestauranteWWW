@@ -1,33 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Platos</h1>
-    <h1>Alimentos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tiempo de preparación</th>
-                <th>Categoría</th>
-                <th>Alimentos</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for p in pl %}
-            <tr>
-                <td> {{ p.nombre }}</td>
-                <td align="center"> {{ p.tiempo_preparacion }}</td>
-                <td> {{ p.categoria }}</td>
-                <td> {{ p.alimentos }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</body>
-</html>
+{%extends 'index.html' %}
+
+{%block b%}
+    <section >      
+        <div class="slide-content-wrapper text-center"> 
+            <div class="slider-content-area">  
+                <h1 style="color: black;padding-bottom: 60px;">PLATOS</h1>
+                <table style="color: black;" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;">Nombre</th>
+                            <th style="text-align: center;">Tiempo de preparación</th>
+                            <th style="text-align: center;">Categoría</th>
+                            <th style="text-align: center;">Ingredientes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for p in pl %}
+                        <tr>
+                            <td> {{ p.nombre }}</td>
+                            <td align="center"> {{ p.tiempo_preparacion }}</td>
+                            <td> {{ p.categoria }}</td>
+                            <td>
+                                {% for a in p.alimentos.all %}
+                                {{a}},
+                                {%endfor%}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>    
+        </div>
+    </section>
+{% endblock %}

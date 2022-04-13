@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import menu,alimentos,platos
 
 urlpatterns = [
-    path('',views.index),
-    path('alimentos',views.alimentos),
-    path('platos',views.platos)
+    path('menu', menu, name="menup"),
+    path('alimentos',alimentos),
+    path('platos',platos)
 ]

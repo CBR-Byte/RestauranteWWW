@@ -1,0 +1,7 @@
+.back { 
+    background: url("C:/Users/julia/OneDrive-correounivalle.edu.co/semestre actual/www/taller 3/GitHub/RestauranteWWW/wombat/restaurante/static/img/back.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
