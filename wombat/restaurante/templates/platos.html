@@ -4,8 +4,9 @@
     <section >      
         <div class="slide-content-wrapper text-center"> 
             <div class="slider-content-area">  
-                <h1 style="color: black;padding-bottom: 60px;">PLATOS</h1>
-                <table style="color: black;" class="table table-striped">
+                <a  style="margin-bottom: 50px;" class="w3-button w3-block w3-salmon" href="{% url 'crearP'%}">Crear Plato</a>    
+                <h1 style="padding-bottom: 60px;">PLATOS</h1>
+                <table  class="table">
                     <thead>
                         <tr>
                             <th style="text-align: center;">Nombre</th>
@@ -25,6 +26,8 @@
                                 {{a}},
                                 {%endfor%}
                             </td>
+                            <td><a class="w3-button w3-block w3-salmon" href="{% url 'EditarP' id=p.id%}">Editar</a></td>
+                            <td><a class="w3-button w3-block w3-salmon" href="{% url 'EliminarP' id=p.id%}">Eliminar</a></td>
                         </tr>
                     {% endfor %}
                     </tbody>
