@@ -1,0 +1,21 @@
+{%extends 'index.html' %}
+
+{% block b %}
+<section  class="slider-area">      
+    <div class="slide-content-wrapper text-center"> 
+        <div class="slider-content-area">  
+            <form  method="POST">
+                {% csrf_token %}
+                {% for field in form%}
+                    <div>
+                        {{field.label}}
+                        {{field}}                      
+                    </div>
+                {% endfor %}
+                <input  class="w3-button w3-block w3-salmon" type="submit" value="Crear Plato">    
+                <a class="w3-button w3-block w3-salmon" href="{% url 'pl'%}">Regresar</a>
+            </form>  
+        </div>    
+    </div>
+</section>
+{%endblock%}

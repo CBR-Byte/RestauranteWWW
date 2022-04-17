@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block b %}
+<section  class="slider-area">      
+    <div class="slide-content-wrapper text-center"> 
+        <div class="slider-content-area">  
+            <form  method="POST">
+                {% csrf_token %}
+                <p style="color: rgb(169, 163, 163);font-size: 35px;" class="text-uppercase font-weight-bold">¿Estás seguro de eliminar el plato {{pl}}?</p>
+                <input  class="w3-button w3-block w3-salmon" type="submit" value="Confirmar">    
+                <a class="w3-button w3-block w3-salmon" href="{% url 'pl'%}">Cancelar</a>
+            </form>  
+        </div>    
+    </div>
+</section>
+{%endblock%}
