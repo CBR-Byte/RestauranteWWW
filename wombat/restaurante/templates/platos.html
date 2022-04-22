@@ -19,7 +19,7 @@
                     {% for p in pl %}
                         <tr>
                             <td> {{ p.nombre }}</td>
-                            <td align="center"> {{ p.tiempo_preparacion }}</td>
+                            <td> {{ p.tiempo_preparacion }}</td>
                             <td> {{ p.categoria }}</td>
                             <td>
                                 {% for a in p.alimentos.all %}

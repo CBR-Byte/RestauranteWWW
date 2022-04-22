@@ -1,7 +1,9 @@
 from email import message
 from multiprocessing import context
 from tkinter import N
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from .models import Platos, Alimentos
 from .forms import AlimentoForm, PlatoForm
 from django.contrib import messages
@@ -36,6 +38,7 @@ def Editar(request,id):
             form = AlimentoForm(request.POST, instance=alimento)
             if form.is_valid():
                 form.save()
+                messages.info(request, 'Se ha editado el alimento correctamente!')
                 return redirect('al')
         context = {
             'form': form
@@ -52,6 +55,7 @@ def EditarP(request,id):
             form = PlatoForm(request.POST, instance=pl)
             if form.is_valid():
                 form.save()
+                messages.info(request, 'Se ha editado el plato correctamente!')
                 return redirect('pl')
         context = {
             'form': form
@@ -64,6 +68,7 @@ def CrearP(request):
         form = PlatoForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Se ha creado el plato correctamente!')
             return redirect('pl')
     context = {
         'form' : form,
@@ -77,6 +82,7 @@ def Crear(request):
         form = AlimentoForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Se ha creado el alimento correctamente!')
             return redirect('al')
     context = {
         'form' : form,
@@ -89,6 +95,7 @@ def Delete(request,id):
 
     if request.method == 'POST':
         alimento.delete()
+        messages.error(request, 'Se ha eliminado el alimento correctamente!')
         return redirect('al')
 
     context = {
@@ -102,7 +109,8 @@ def DeleteP(request,id):
 
     if request.method == 'POST':
         pl.delete()
-        return redirect('pl')
+        messages.error(request, 'Se ha eliminado el plato correctamente!')
+        return HttpResponseRedirect(reverse_lazy('pl'))
 
     context = {
         'pl': pl
