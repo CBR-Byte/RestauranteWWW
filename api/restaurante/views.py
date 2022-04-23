@@ -10,11 +10,14 @@ from .serializers import PlatoSerializer, AlimentoSerializer
 @api_view(['GET'])
 def apiOverview(request):
     api_urls={
-        'List': '/task-list/',
-        'Detail View': '/task-detail/<str:pk>',
-        'Create': '/task-create/',
-        'Update': '/task-update/<str:pk>',
-        'Detale': '/task-delate/<str:pk>',
+        'Lista de alimentos': '/alimentos/',
+        'Crear Alimentos': '/crearA/',
+        'Editar alimento': '/editA/<str:id>',
+        'Eliminar': '/deleteA/<str:id>',
+        'Lista de platos': '/platos/',
+        'Crear Plato': '/crearP/',
+        'Editar plato': '/editP/<str:id>',
+        'Eliminar plato': '/deleteP/<str:id>',
     }
 
     return Response(api_urls)
