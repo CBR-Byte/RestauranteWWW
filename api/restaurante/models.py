@@ -15,4 +15,4 @@ class Platos(models.Model):
     alimentos = models.ManyToManyField(Alimentos,blank=True)
     def __str__(self):
         return self.nombre
-    
+

@@ -10,6 +10,7 @@ from .serializers import PlatoSerializer, AlimentoSerializer
 @api_view(['GET'])
 def apiOverview(request):
     api_urls={
+        'integrantes': 'Julián Leal-1860143, Cristhian Botero-1860054',
         'Lista de alimentos': '/alimentos/',
         'Crear Alimentos': '/crearA/',
         'Editar alimento': '/editA/<str:id>',

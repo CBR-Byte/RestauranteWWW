@@ -1,16 +1,17 @@
 {% extends 'index.html'%}
 
 {% block b%}
-<section  class="slider-area">      
-    <div class="slide-content-wrapper text-center"> 
-        <div class="slider-content-area">  
-            <form  method="POST">
+<section class="slider-area">
+    <div class="slide-content-wrapper text-center">
+        <h1 style="padding-top: 85px;color: white;font-size: 40px;" class="w3-block w3-salmon">{{nombre}}</h1>
+        <div class="slider-content-area">
+            <form method="POST">
                 {% csrf_token %}
                 {{form}}
-                <input  class="w3-button w3-block w3-salmon" type="submit" value="Editar">    
+                <input class="w3-button w3-block w3-salmon" type="submit" value="Editar">
                 <a class="w3-button w3-block w3-salmon" href="{% url 'al'%}">Regresar</a>
-            </form>  
-        </div>    
+            </form>
+        </div>
     </div>
 </section>
 {% endblock %}

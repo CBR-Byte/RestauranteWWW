@@ -9,6 +9,7 @@ class AlimentoSerializer(serializers.ModelSerializer):
 
 
 class PlatoSerializer(serializers.ModelSerializer):
+    #alimentos = serializers.StringRelatedField(many=True, read_only=True)
     class Meta:
         model = Platos
         fields = ['id','nombre','tiempo_preparacion','categoria','alimentos']

@@ -11,6 +11,4 @@ urlpatterns = [
     path('crearP/',views.crearP,name="cp"),
     path('editP/<str:id>',views.editP,name="ep"),
     path('deleteP/<str:id>',views.deleteP,name="dp")
-
-
 ]

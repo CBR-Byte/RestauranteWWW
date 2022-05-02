@@ -12,15 +12,20 @@
                     <!-- Start Slider Content -->
 
                         <div class="slider-content-area">  
+                            <span style="margin-block-start: 50px;">
+                                Integrantes:<br>
+                                Julián David Leal P. -1860143 <br>
+                                Cristhian Botero- 1860054 <br>
+                            </span>
                                 <div class="row">                   
-                                        <div class="slide-content-wrapper text-center">
+                                        <div class="slide-content-wrapper text-center">                                           
                                             <div class="slide-content">
-                                                <img class="classic" src="{% static 'img/cemrebakerylogo.png'%}">
+                                                <img class="classic" src="{% static 'img/cemrebakerylogo.png'%}">                                                
                                                 <h3>WOMBAT RESTAURANT </h3>
                                                 <h2>A Taste Of  The Good Life</h2>
                                                 <div class="panel-body text-center"> 
-                                                    <a style="height: 40px;" class="w3-button w3-block w3-salmon" href="http://127.0.0.1:8000/restaurante/alimentos">ALIMENTOS</a>   
-                                                    <a style="height: 40px;" class="w3-button w3-block w3-salmon" href="http://127.0.0.1:8000/restaurante/platos">PLATOS</a>
+                                                    <a style="height: 40px;" class="w3-button w3-block w3-salmon" href="{% url 'al'%}">ALIMENTOS</a>   
+                                                    <a style="height: 40px;" class="w3-button w3-block w3-salmon" href="{% url 'pl'%}">PLATOS</a>
                                                     <img class="classic" src="{% static 'img/icon.png'%}">
                                                 </div>
                                                 
